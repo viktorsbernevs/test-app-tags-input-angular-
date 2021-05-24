@@ -1,0 +1,15 @@
+<div style="text-align:center">  
+  <h2>Tags Input Angular - Form Control</h2>
+  <div class="editor-tag">
+    <span class="tag-item" *ngFor="let tag of tags">
+        {{tag}}
+        <span class="remove-tag" (click)="removeTag(tag)">×</span>
+      </span>
+      <input
+      placeholder="Type in a new tag"
+      #tagInput type="text"
+      class="input-tag"
+      (keyup)="onKeyUp($event)"
+      [formControl]="myFormControl">
+  </div>
+</div>
